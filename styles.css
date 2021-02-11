@@ -7,7 +7,7 @@
 body {
     background: #e6ecf0;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    text-rendering: optimizeLegibility !important; /*Reduz a quebra de pixels da fonte*/ 
+    text-rendering: optimizeLegibility !important; /*Reduz a quebra de pixels da fonte*/
     -webkit-font-smoothing: antialiased !important; /*Suavia o render das fontes*/
 }
 
@@ -40,7 +40,7 @@ header#main-header .content {
 
 header#main-header nav ul {
     display: flex;
-    list-style: none;   
+    list-style: none;
 }
 
 header#main-header nav ul li {
@@ -110,4 +110,87 @@ div.banner {
     justify-content: center;
 
     color: #fff;
+}
+
+div.bar {
+    background: #fff;
+    /*
+    shothand:
+    0 - quantos pixels horizontalmente a bar deve posicionar
+    1px - quantos pixels verticalmente ela deve se posicionar
+    3px - blur da box-shadow
+    */
+    box-shadow: 0 1px 3px rgba(0,0,0, 0.25);
+    height: 59px;
+}
+
+div.bar .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 100%;
+    padding-left: 285px;
+}
+
+div.bar .content ul {
+    display: flex;
+    list-style: none;
+    height: 100%;
+}
+
+div.bar .content ul li {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 15px;
+}
+
+div.bar .content ul li.active::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: relative;
+    bottom: -11px;
+    left: 0;
+    background: #3bb9e3;
+}
+
+div.bar .content ul li span {
+    color: #667580;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+div.bar .content ul li strong {
+    color: #667580;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 2px;
+}
+
+div.bar .content ul li.active strong {
+    color: #3bb9e3;
+}
+
+div.bar .content .actions {
+    display: flex;
+}
+
+div.bar .content .actions button {
+    height: 34px;
+    background: #fff;
+
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    border: 1px solid #3bb9e3;
+    border-radius: 16px;
+    color: #3bb9e3;
+    font-size: 14px;
+    font-weight: 90px;
+    margin-right: 20px;
+    width: 90px;
 }
